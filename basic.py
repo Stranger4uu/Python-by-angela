@@ -27,3 +27,31 @@ print(type(True))
 # type conversion or Type casting
 
 print(int("48") + int("52"))
+
+# practice question 
+
+#solve the error in this = print("Number of letters in your name : " + (len(input("Enter your name : "))))
+print("Number of letters in your name : " + str(len(input("Enter your name : "))))
+
+
+# PEMDAS
+
+#()
+#exponents **
+#*
+#/
+#+
+#-
+
+print(3*3+3/3-3)
+
+# now to change this code so that answer will be or output will be 3 
+
+print(3*(3+3)//3-3)
+
+# number manipulation (use of f string)
+
+iq = 69
+cgpa = 8.1
+got_placed = True
+print(f"your iq is : {iq} , your cgpa is : {cgpa} and your placement status is : {got_placed}")
