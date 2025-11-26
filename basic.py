@@ -16,3 +16,8 @@ print(glass2)
 a = "Yash here"
 l =len(a)
 print(l)
+
+# to check the type of a variable
+
+print(type("Yash"))
+print(type(6969))
