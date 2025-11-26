@@ -21,3 +21,9 @@ print(l)
 
 print(type("Yash"))
 print(type(6969))
+print(type(4.55))
+print(type(True))
+
+# type conversion or Type casting
+
+print(int("48") + int("52"))
