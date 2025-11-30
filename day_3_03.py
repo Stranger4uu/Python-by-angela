@@ -15,16 +15,27 @@
 print("Hey..Welcome to the rollercoaster")
 age = int(input("What's your age : "))
 height = int(input("Enter your height in cm : "))
+bill = 0
 if height >= 120:
     print("Congo...  You can ride")
     if age < 12:
+        bill = 5
         print("You need to pay 5$ ")
-    elif age > 12 and age <= 18:
+    elif age <= 18:
         print("You need to pay 7$ ")
-    elif age > 18:
+        bill = 7
+    else :
         print("You need to pay 12$ ")
+        bill = 12
+    want_photos =input("Do you want to take photos ? if yes type y and if no type n : ")
+    if want_photos == "y":
+        bill += 3
+    print(f"Your total bill is {bill}")
 else:
     print("You cannot ride because your height is less than 120 cm sorry :( ")
+
+
+
 
 
 
