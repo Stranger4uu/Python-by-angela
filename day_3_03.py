@@ -18,7 +18,10 @@ height = int(input("Enter your height in cm : "))
 bill = 0
 if height >= 120:
     print("Congo...  You can ride")
-    if age < 12:
+    if age >= 45 and age < 55:
+        bill = 0
+        print("You don't need to pay anything , enjoy :)")
+    elif age < 12:
         bill = 5
         print("You need to pay 5$ ")
     elif age <= 18:
