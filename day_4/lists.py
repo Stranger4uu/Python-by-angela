@@ -29,3 +29,10 @@ States_names_of_INDIA = [
     "west bengal"
 ]
 print(States_names_of_INDIA[20])
+print(States_names_of_INDIA[-5])
+
+
+# we can alter any item in the list easily, example is below...
+
+States_names_of_INDIA[20] = "where pink city is"
+print(States_names_of_INDIA)
