@@ -9,3 +9,16 @@ for scores in students_score:
     sum += scores
 
 print(sum)
+
+# to find largest number in the list we can use max function 
+
+print(max(students_score))
+
+#Or 
+
+max_score = 0
+for scores in students_score:
+    if scores > max_score:
+        max_score = scores
+
+print(max_score)
