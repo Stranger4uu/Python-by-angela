@@ -30,6 +30,3 @@
 #     loop()
 #     number_of_hurdles -= 1
 #     print(number_of_hurdles)
-
-
-    
