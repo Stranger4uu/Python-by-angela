@@ -1,48 +1,47 @@
 import random
-
-HANGMANPICS = ['''
+HANGMANPICS = [r'''
   +---+
   |   |
       |
       |
       |
       |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
+      |
+      |
+      |
+=========''', r'''
+  +---+
+  |   |
+  O   |
   |   |
       |
       |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
  /|   |
       |
       |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
  /|\  |
       |
       |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
  /|\  |
  /    |
       |
-=========''', '''
+=========''', r'''
   +---+
   |   |
   O   |
@@ -51,7 +50,14 @@ HANGMANPICS = ['''
       |
 =========''']
 
-random_words = ["green", "fruit", "apple", "games", "ocean", "music", "planet", "river", "window", "sunshine"]
+
+random_words = [
+    "red", "blue", "green", "yellow", "pink", "purple", "orange", "black",
+    "white", "gray", "cyan", "magenta", "maroon", "navy", "teal", "lime",
+    "olive", "indigo", "violet", "turquoise", "beige", "brown", "gold",
+    "silver", "coral", "peach", "lavender", "mint", "crimson", "skyblue"
+]
+
 
 
 lives = 6
@@ -73,6 +79,9 @@ correct_letters = []
 
 while not Game_over:  # Fix the condition to use != for the game loop
     guess = input("Guess a letter : ").lower()
+    if guess in display:
+        print("You have already guessed this letter before , but don't worry you havent lost any lives this time ")
+
 
     display = ""
 
@@ -84,17 +93,19 @@ while not Game_over:  # Fix the condition to use != for the game loop
             display += letter
         else:
             display += "_"
-    print(display)
+    print("word to guess: " + display)
+    
 
     if guess not in choosen_word:
         lives -=1 
-        print("You lost a live")
-        print(f"Now you have : {lives} lives ")
+        print(f"You lost a live because : {guess} is not in the word ")
+        print(f"Now you have : ******** {lives} ******** lives ")
     if lives < 6:
         print(HANGMANPICS[6 - lives])
         
     if lives == 0:
-        print("Game over! You have 0 lives left.")
+        print("Game over! You have ******** 0 ******** lives left.")
+        print(f"The word was : {choosen_word}")
         Game_over = True
         break
 
@@ -102,6 +113,5 @@ while not Game_over:  # Fix the condition to use != for the game loop
  
     if "_" not in display:
         Game_over = True
-        print("You won.....")
-
-print(choosen_word)
+        print("******** You won..... ********")
+        print(f"Correct the word is : {choosen_word}")
