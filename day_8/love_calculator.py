@@ -1,3 +1,20 @@
+logo = """
+====================================
+        💖 LOVE CALCULATOR 💖
+====================================
+
+        ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥
+      ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥
+     ♥ ♥   TRUE LOVE   ♥ ♥
+      ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥
+        ♥ ♥ ♥ ♥ ♥ ♥ ♥
+
+------------------------------------
+      Let the Love Score Decide 💕
+------------------------------------
+"""
+
+
 def calculate_love_score(name1, name2):
     combined_names = (name1 + name2).lower()
     
@@ -17,6 +34,6 @@ def calculate_love_score(name1, name2):
     
     print(f"{true_count}{love_count}")
 
-
+print(logo)
 
 calculate_love_score("Yash", "No one for now")
