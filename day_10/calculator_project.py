@@ -45,8 +45,9 @@ def calculator():
         answer = operations[operaton_symbol](num1,num2)
         print(f"{num1} {operaton_symbol} {num2} = {answer}")
 
-        choice = input(f"Type 'y' to continue calculating with {answer} or Type 'n' to start a new calculation : ").lower()
-
+        choice = input(f"Type 'y' to continue calculating with {answer} Or Type 'n' to start a new calculation Or Type 'stop' to stop program ").lower()
+        if choice =="stop":
+            return 0
         if choice =="y":
             num1 = answer
 
