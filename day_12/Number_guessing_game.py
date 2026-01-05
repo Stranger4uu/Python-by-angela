@@ -32,6 +32,7 @@ while Game_over == False:
     if user_choice != random_number:
         attempt -= 1
         print(f"You have {attempt} attempts left")
+        print(f"Guess again")
 
         if attempt == 0:
             print("You lost 😢, no attempts left.")
