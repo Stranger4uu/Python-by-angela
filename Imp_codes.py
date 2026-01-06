@@ -1,12 +1,13 @@
-if __name__ == '__main__':
-    n = int(input())
-    arr = list(map(int, input().split()))
+# Runner-Up Score Program
 
-    max_score = max(arr)
-    
-    # Remove all occurrences of the maximum score
-    while max_score in arr:
-        arr.remove(max_score)
-    
-    # Now the maximum of remaining list is runner-up
-    print(max(arr))
+n = int(input("Enter number of scores: "))
+arr = list(map(int, input("Enter the scores: ").split()))
+
+# Remove duplicates
+unique_scores = list(set(arr))
+
+# Sort the list
+unique_scores.sort()
+
+# Print the second highest score
+print("Runner-up score:", unique_scores[-2])
