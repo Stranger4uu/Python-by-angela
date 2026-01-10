@@ -21,13 +21,13 @@ logo_2 = """
 data = [
     {
         'name': 'Instagram',
-        'follower_count': 346,
+        'follower_count': 698,
         'description': 'Social media platform',
         'country': 'United States'
     },
     {
         'name': 'Cristiano Ronaldo',
-        'follower_count': 215,
+        'follower_count': 670,
         'description': 'Footballer',
         'country': 'Portugal'
     },
