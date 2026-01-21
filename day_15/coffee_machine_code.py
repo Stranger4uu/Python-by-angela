@@ -40,8 +40,6 @@ def is_resource_sufficient(order_ingredients):
     return True
 
 
-
-
 def process_coins():
     """Returns the total calculated from coins inserted."""
     print("Please insert coins.")
@@ -50,7 +48,6 @@ def process_coins():
     total += int(input("how many nickles?: ")) * 0.05
     total += int(input("how many pennies?: ")) * 0.01
     return total
-
 
 
 def is_transaction_successful(money_received, drink_cost):
@@ -66,15 +63,11 @@ def is_transaction_successful(money_received, drink_cost):
         return False
 
 
-
-
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources."""
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name} ☕️. Enjoy!")
-
-
 
 
 is_on = True
