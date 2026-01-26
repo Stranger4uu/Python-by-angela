@@ -73,7 +73,7 @@ is_on = True
 
 while is_on:
     choice = input(
-        "​What would you like? (espresso/latte/cappuccino) \n Or type 'report' to get the resource report as of now : ")
+        "What would you like? (espresso/latte/cappuccino) \n Or type 'report' to get the resource report as of now : ")
 
 
 
