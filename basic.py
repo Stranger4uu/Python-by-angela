@@ -97,3 +97,32 @@ def even_or_odd(n):
         print("ODD")
 
 even_or_odd(4)
+
+# recursive function
+
+def show(n):
+    if(n==0):
+        return
+    print(n)
+    show(n-1)
+
+show(5)
+
+def fact(n):
+    if n == 0 or n == 1:
+        return 1
+    return fact(n-1) * n
+
+print(fact(4))
+
+''' call stack 
+The call stack is how a program keeps track of which function is running right now.
+
+Think of it like:
+
+📚 A stack of books — you can only put a new book on top, and you can only remove the top one.
+
+Call stack is a memory structure that stores function calls in a Last-In-First-Out (LIFO) order to manage program execution.
+
+'''
+
