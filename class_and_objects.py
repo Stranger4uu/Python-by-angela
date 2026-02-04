@@ -14,7 +14,7 @@ s1.Welcome()
 
 # create student class that takes name and marks of 3 subjects as arguments as constructor.
 # then create a method to print the average 
-class Student:
+'''class Student:
     def __init__(self,name,marks):
         self.name = name
         self.marks = marks
@@ -26,3 +26,28 @@ class Student:
 
 s1 = Student("Yash saini",[75,78,80])
 s1.get_avg()
+'''
+
+# static methods (methods that don't use self parameter and work at class level)
+# @staticmethod (decorator)
+
+class Student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    
+    @staticmethod
+    def greeting():
+        print("Hello")
+
+    def get_avg(self):
+        sum = 0
+        for value in self.marks:
+            sum += value
+        print(f"hi,{self.name},Your avg score is : {sum/3}")
+
+s1 = Student("Yash saini",[75,78,80])
+s1.get_avg()
+s1.greeting()
+
+
