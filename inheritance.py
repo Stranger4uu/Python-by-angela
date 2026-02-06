@@ -1,4 +1,4 @@
-class Car:
+'''class Car:
     @staticmethod
     def start():
         print("started...")
@@ -25,6 +25,7 @@ print(car1.brand)
 print(car2.brand)
 print(car1.start())
 print(car1.stop())
+'''
 
 
 ''' There are 3 types of inheritance
@@ -47,3 +48,30 @@ c1 = C()
 print(c1.varA)
 print(c1.varB)
 print(c1.varC)
+
+# Super method ()
+
+class Car:
+    def __init__(self,type):
+        self.type = type
+
+    @staticmethod
+    def start():
+        print("started...")
+
+    @staticmethod
+    def stop():
+        print("stopped...")
+
+class ToyatoCar (Car):
+    def __init__(self,name,type):
+        self.name = name
+        super().__init__(type)
+
+
+car1 = ToyatoCar("prius", "Petrol")
+print(car1.type)
+print(car1.name)
+
+
+
