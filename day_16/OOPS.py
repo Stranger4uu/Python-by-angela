@@ -1,0 +1,1 @@
+# day 16 was all about understanding attributes and objects 
