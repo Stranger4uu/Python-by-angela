@@ -1,5 +1,3 @@
-# Turtle Race
-
 import turtle
 import random
 
@@ -8,7 +6,7 @@ import random
 # dimensions of the window
 FRAME_WIDTH = 600
 FRAME_HEIGHT = 400
-# the number of colors determines the number of racers
+
 COLOR_LIST = ["red", "orange", "yellow", "green", "blue", "purple"]
 # a positive INT to set the speed, between like 5 and 15 is a reasonable value
 SPEED = 10
