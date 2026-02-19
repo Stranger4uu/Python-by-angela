@@ -8,10 +8,10 @@ FRAME_WIDTH = 600
 FRAME_HEIGHT = 400
 
 COLOR_LIST = ["red", "orange", "yellow", "green", "blue", "purple"]
-# a positive INT to set the speed, between like 5 and 15 is a reasonable value
+
 SPEED = 10
 
-# screen setup
+
 screen = turtle.Screen()
 screen.setup(width=FRAME_WIDTH, height=FRAME_HEIGHT)
 screen.title("Turtle Race")
@@ -36,14 +36,14 @@ for i in range(racers):
     racer_list[i].sety(start_y + offset * i)
     racer_list[i].showturtle()
 
-# ask for input, for simplicity, accept whatever is entered
+
 guess = screen.textinput(title="Make Your Bet", prompt="Which turtle will win the race? Enter a color:")
 
-# the finish line, offset from the right edge
+
 end_x = FRAME_WIDTH / 2 - 25
 race_is_over = False
 winner = ""
-# the race loop
+# loop
 while not race_is_over:
     # could have just used "for racer in racer_list:", but this way is more consistent with the above
     # and makes retrieving the winner's color (a tiny bit) simpler
@@ -60,8 +60,8 @@ print(f"The winner was {winner}.")
 if guess.lower() == winner.lower():
     print("You won the bet!")
 else:
-    # lose even if they enter an invalid input, e.g. a color not in the list
+    
     print("Sorry, you lost.")
 
-# wait for a click once the race is over, rather than just closing the window
+
 screen.exitonclick()
